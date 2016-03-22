@@ -1,6 +1,6 @@
 # !/bin/bash
 #
-# Architect Installation Framework (version 2.1 - 07-Mar-2016)
+# Architect Installation Framework (version 2.2 - 22-Mar-2016)
 #
 # Written by Carl Duff for Architect Linux
 #
@@ -23,7 +23,7 @@ PACKAGES="/tmp/.pkgs"			# Packages to install
 BTRFS_OPTS="/tmp/.btrfs_opts"	# BTRFS mount options
 
 # Save retyping
-VERSION="Architect Installation Framework 2.1"
+VERSION="Architect Installation Framework 2.2"
 
 # Installation
 DM_INST=""							# Which DMs have been installed?
@@ -276,7 +276,7 @@ configure_mirrorlist() {
 mirror_by_country() {
 
  COUNTRY_LIST=""
- countries_list="AU Australia AT Austria BA Bosnia_Herzegovina BY Belarus BE Belgium BR Brazil BG Bulgaria CA Canada CL Chile CN China CO Colombia CZ Czech_Republic DK Denmark EE Estonia FI Finland FR France DE Germany GB United_Kingdom GR Greece HU Hungary IN India IE Ireland IL Israel IT Italy JP Japan KZ Kazakhstan KR Korea LV Latvia LU Luxembourg MK Macedonia NL Netherlands NC New_Caledonia NZ New_Zealand NO Norway PL Poland PT Portugal RO Romania RU Russia RS Serbia SG Singapore SK Slovakia ZA South_Africa ES Spain LK Sri_Lanka SE Sweden CH Switzerland TW Taiwan TR Turkey UA Ukraine US United_States UZ Uzbekistan VN Vietnam"
+ countries_list="AU Australia AT Austria BA Bosnia_Herzegovina BY Belarus BE Belgium BR Brazil BG Bulgaria CA Canada CL Chile CN China CO Colombia CZ Czech_Republic DK Denmark EE Estonia FI Finland FR France DE Germany GB United_Kingdom GR Greece HU Hungary IN India IE Ireland IL Israel IT Italy JP Japan KZ Kazakhstan KR Korea LT Lithuania LV Latvia LU Luxembourg MK Macedonia NL Netherlands NC New_Caledonia NZ New_Zealand NO Norway PL Poland PT Portugal RO Romania RU Russia RS Serbia SG Singapore SK Slovakia ZA South_Africa ES Spain LK Sri_Lanka SE Sweden CH Switzerland TW Taiwan TR Turkey UA Ukraine US United_States UZ Uzbekistan VN Vietnam"
 
  for i in ${countries_list}; do
      COUNTRY_LIST="${COUNTRY_LIST} ${i}"
@@ -710,7 +710,7 @@ auto_partition(){
 		done
  
 		# Identify the partition table
-		part_table=$(parted -s ${DEVICE} print | grep -i 'partition table' | awk '{print $3}')
+		part_table=$(parted -s ${DEVICE} print | grep -i 'partition table' | awk '{print $3}' >/dev/null 2>&1)
  
 		# Create partition table if one does not already exist
 		([[ $SYSTEM == "BIOS" ]] && [[ $part_table != "msdos" ]]) && parted -s ${DEVICE} mklabel msdos 2>/tmp/.errlog
@@ -2104,6 +2104,7 @@ install_ati(){
             clear
  			
             pacstrap ${MOUNTPOINT} virtualbox-guest-utils virtualbox-guest-dkms $VB_MOD 2>/tmp/.errlog
+			umount -l /mnt/dev
  
             # Load modules and enable vboxservice.
             arch_chroot "modprobe -a vboxguest vboxsf vboxvideo"  
@@ -2156,6 +2157,7 @@ install_de_wm() {
 
 	# DE/WM Menu
 	dialog --backtitle "$VERSION - $SYSTEM ($ARCHI)" --title " $_InstDETitle " --checklist "$_InstDEBody $_UseSpaceBar" 0 0 12 \
+	"budgie-desktop" "-" off \
 	"cinnamon" "-" off \
 	"deepin" "-" off \
 	"deepin-extra" "-" off \
