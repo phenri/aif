@@ -2076,27 +2076,27 @@ install_de_wm() {
 
 	# DE/WM Menu
 	dialog --backtitle "$VERSION - $SYSTEM ($ARCHI)" --title " $_InstDETitle " --checklist "$_InstDEBody $_UseSpaceBar" 0 0 12 \
-	"budgie-desktop" "-" off \
-	"cinnamon" "-" off \
-	"deepin" "-" off \
-	"deepin-extra" "-" off \
-	"enlightenment + terminology" "-" off \
-	"gnome-shell" "-" off \
-	"gnome" "-" off \
-	"gnome-extra" "-" off \
-	"plasma-desktop" "-" off \
-	"plasma" "-" off \
-	"kde-applications" "-" off \
-	"lxde" "-" off \
-	"lxqt + oxygen-icons" "-" off \
-	"mate" "-" off \
-	"mate-extra" "-" off \
-	"mate-gtk3" "-" off \
-	"mate-extra-gtk3" "-" off \
 	"xfce4" "-" off \
 	"xfce4-goodies" "-" off \
-	"awesome + vicious" "-" off \
-	"fluxbox + fbnews" "-" off \
+	"firefox + firefox-i18n-fr" "-" off \
+	"filezilla" "-" off \
+	"terminator" "-" off \
+	"keepassx2" "-" off \
+	"mpv + smplayer + smplayer-skins + smplayer-themes" "-" off \
+	"vlc" "-" off \
+	"conky" "-" off \
+	"catfish + wget" "-" off \
+	"linux-headers + ntp" "-" off \
+	"virtualbox + virtualbox-host-dkms + qt5-x11extras" "-" off \
+	"ffmpegthumbnailer + oxygen-icons" "-" off \
+	"file-roller + xarchiver" "-" off \
+	"gimp + gimp-help-fr" "-" off \
+	"mate-gtk3" "-" off \
+	"mate-extra-gtk3" "-" off \
+	"epdfview" "-" off \
+	"libreoffice-fresh" "-" off \
+	"libreoffice-fresh-fr" "-" off \
+	"dropbox" "-" off \
 	"i3-wm + i3lock + i3status" "-" off \
 	"icewm + icewm-themes" "-" off \
 	"openbox + openbox-themes" "-" off \
