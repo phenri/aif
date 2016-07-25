@@ -2132,17 +2132,17 @@ install_de_wm() {
 		"xdg-user-dirs" "-" on \
 		"xdg-utils" "-" on \
 		"xterm" "-" on 2>${PACKAGES}
-		# Copy packbox files.
-		cp -f /aif-master/packbox/conky/.conkyrc ${MOUNTPOINT}/home/$i
-		cp -f /aif-master/packbox/conky/.conkyrc2 ${MOUNTPOINT}/home/$i
-		cp -f /aif-master/packbox/conky/.conkystart.sh ${MOUNTPOINT}/home/$i
-		cp -f /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 
 		# If at least one package, install.
 		if [[ $(cat ${PACKAGES}) != "" ]]; then
 			clear
 			pacstrap ${MOUNTPOINT} $(cat ${PACKAGES}) 2>/tmp/.errlog
 			check_for_error
+			# Copy packbox files.
+		    cp -f /aif-master/packbox/conky/.conkyrc ${MOUNTPOINT}/home/$i
+		    cp -f /aif-master/packbox/conky/.conkyrc2 ${MOUNTPOINT}/home/$i
+		    cp -f /aif-master/packbox/conky/.conkystart.sh ${MOUNTPOINT}/home/$i
+		    cp -f /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 		fi
 
 	fi
