@@ -2143,6 +2143,7 @@ install_de_wm() {
 		    cp -f /aif-master/packbox/conky/.conkyrc2 ${MOUNTPOINT}/home/$i
 		    cp -f /aif-master/packbox/conky/.conkystart.sh ${MOUNTPOINT}/home/$i
 		    cp -f /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
+		    cp -f /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
 		fi
 
 	fi
