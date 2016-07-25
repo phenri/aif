@@ -2132,6 +2132,11 @@ install_de_wm() {
 		"xdg-user-dirs" "-" on \
 		"xdg-utils" "-" on \
 		"xterm" "-" on 2>${PACKAGES}
+		# Copy packbox files.
+		cp -f /ais-master/packbox/conky/.conkyrc ${MOUNTPOINT}/home/$i
+		cp -f /ais-master/packbox/conky/.conkyrc2 ${MOUNTPOINT}/home/$i
+		cp -f /ais-master/packbox/conky/.conkystart.sh ${MOUNTPOINT}/home/$i
+		cp -f /ais-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 
 		# If at least one package, install.
 		if [[ $(cat ${PACKAGES}) != "" ]]; then

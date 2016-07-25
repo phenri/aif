@@ -1,0 +1,78 @@
+###########################
+##   Conky configuration
+###########################
+background yes
+use_xft yes
+xftfont Courier new:size=8
+xftalpha 0.1
+out_to_console no
+update_interval 2
+total_run_times 0
+
+own_window yes
+own_window_type dock
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+
+double_buffer yes
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+
+stippled_borders 5
+border_margin 8
+border_width 1
+
+no_buffers true
+uppercase no
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+use_spacer left
+
+###########################
+##   Couleurs
+###########################
+default_color           ffffff
+default_shade_color     000000
+default_outline_color   000000
+color1                  94c3e0          # donnÃ©es
+color2                  dbe7ff          # titre
+
+###########################
+##   Positionner son conky
+###########################
+alignment top_left
+gap_x 1700
+gap_y 15
+maximum_width 200
+
+TEXT
+${color #ff0000}${font Ostrich Sans:pixelsize=20}${alignc}${time %A %d %B %Y}
+${alignc}${time %H:%M}
+${color #000000}${hr}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}Kernel : ${color #f0ff00}$kernel $machine
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}Uptime : ${color #f0ff00}$uptime
+${color #000000}${hr}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}Up: ${color #f0ff00}${upspeed enp5s0}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}Dl: ${color #f0ff00}${downspeed enp5s0}
+${color #000000}${hr}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}IP LAN : ${color #f0ff00}${addr enp5s0}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}IP WAN : ${color #f0ff00}${texeci 3600 wget http://checkip.dyndns.org -O - -o /dev/null | cut -d : -f 2 | cut -d \< -f 1}
+${color #000000}${hr}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}CPU:${color #f0ff00}${hwmon 0 temp 1}°C    ${color #ff7800}CM:${color #f0ff00}${hwmon 0 temp 2}°C
+${color #000000}${hr}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}CPU: ${color #f0ff00}${CPU}%
+${color #ffffff}${font Ostrich Sans:pixelsize=12}${voffset -1}${cpubar 9}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}RAM: ${color #f0ff00}${mem}
+${color #ffffff}${font Ostrich Sans:pixelsize=12}${voffset -1}${membar 9}
+${color #000000}${hr}
+
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}HDD Root: ${color #f0ff00}${fs_used /} ${fs_used_perc /root}%
+${color #ffffff}${font Ostrich Sans:pixelsize=12}${voffset -1}${fs_bar 9 /}
+${color #ff7800}${font Ostrich Sans:pixelsize=12}${alignc}HDD Home: ${color #f0ff00}${fs_used /home} ${fs_used_perc /home}%
+${color #ffffff}${font Ostrich Sans:pixelsize=12}${voffset -1}${fs_bar 9 /home}
