@@ -2140,12 +2140,12 @@ install_de_wm() {
 			check_for_error
 			# Copy packbox files.
 			cp -f /aif-master/packbox/wallpapers/arch1.png ${MOUNTPOINT}/usr/share/backgrounds/xfce
-			cp -f /aif-master/packbox/wallpapers/arch2.png ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch2.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
 			cp -f /aif-master/packbox/custom-TerminalEmulator.desktop ${MOUNTPOINT}/home/$i/.local/xfce4/helpers
 		    cp -f /aif-master/packbox/conky/.conkyrc ${MOUNTPOINT}/home/$i
 		    cp -f /aif-master/packbox/conky/.conkyrc2 ${MOUNTPOINT}/home/$i
 		    cp -f /aif-master/packbox/conky/.conkystart.sh ${MOUNTPOINT}/home/$i
-		    cp -f /aif-master/packbox/conky/conky.desktop ${MOUNTPOINT}/home/$i/.config/autostart
+		    cp -f /aif-master/packbox/conky/conky.desktop ${MOUNTPOINT}/home/$i/.config/autostart/conky.desktop
 		    cp -f /aif-master/packbox/thunar/uca.xml ${MOUNTPOINT}/home/$i/.config/Thunar
 		    cp -r /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 		    cp -r /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
