@@ -2076,29 +2076,29 @@ install_de_wm() {
 
 	# DE/WM Menu
 	dialog --backtitle "$VERSION - $SYSTEM ($ARCHI)" --title " $_InstDETitle " --checklist "$_InstDEBody $_UseSpaceBar" 0 0 12 \
-	"xfce4" "-" off \
-	"xfce4-goodies" "-" off \
-	"firefox + firefox-i18n-fr" "-" off \
-	"filezilla" "-" off \
-	"terminator" "-" off \
-	"keepassx2" "-" off \
-	"mpv + smplayer + smplayer-skins + smplayer-themes" "-" off \
-	"vlc" "-" off \
-	"conky" "-" off \
-	"catfish + wget" "-" off \
-	"linux-headers + ntp" "-" off \
-	"virtualbox + virtualbox-host-dkms + qt5-x11extras" "-" off \
-	"ffmpegthumbnailer + oxygen-icons" "-" off \
-	"file-roller + xarchiver + unrar" "-" off \
-	"gimp + gimp-help-fr" "-" off \
-	"yaourt" "-" off \
+	"xfce4" "-" on \
+	"xfce4-goodies" "-" on \
+	"firefox + firefox-i18n-fr" "-" on \
+	"filezilla" "-" on \
+	"terminator" "-" on \
+	"keepassx2" "-" on \
+	"mpv + smplayer + smplayer-skins + smplayer-themes" "-" on \
+	"vlc" "-" on \
+	"conky" "-" on \
+	"catfish + wget" "-" on \
+	"linux-headers + ntp" "-" on \
+	"virtualbox + virtualbox-host-dkms + qt5-x11extras" "-" on \
+	"ffmpegthumbnailer + oxygen-icons" "-" on \
+	"file-roller + xarchiver + unrar" "-" on \
+	"gimp + gimp-help-fr" "-" on \
+	"yaourt" "-" on \
 	"mate-extra-gtk3" "-" off \
-	"epdfview" "-" off \
-	"libreoffice-fresh" "-" off \
-	"libreoffice-fresh-fr" "-" off \
-	"dropbox" "-" off \
-	"numix-themes" "-" off \
-	"ld-lsb" "-" off \
+	"epdfview" "-" on \
+	"libreoffice-fresh" "-" on \
+	"libreoffice-fresh-fr" "-" on \
+	"dropbox" "-" on \
+	"numix-themes" "-" on \
+	"ld-lsb" "-" on \
 	"openbox + openbox-themes" "-" off \
 	"pekwm + pekwm-themes" "-" off \
 	"windowmaker" "-" off 2>${PACKAGES}
@@ -2148,7 +2148,6 @@ install_de_wm() {
 
 		    cp -f /aif-master/packbox/conky/.conkyrc ${MOUNTPOINT}/home/$i
 		    cp -f /aif-master/packbox/conky/.conkyrc2 ${MOUNTPOINT}/home/$i
-		    cp -f /aif-master/packbox/conky/.conkystart.sh ${MOUNTPOINT}/home/$i
 
 		    cp -r /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 		    cp -r /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
