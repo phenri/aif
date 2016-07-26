@@ -2153,6 +2153,8 @@ install_de_wm() {
 		    cp -r /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 		    cp -r /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
 
+		    cp -f /aif-master/packbox/makepkg ${MOUNTPOINT}/usr/bin
+
 		    arch_chroot "yaourt -Syua" 2>/tmp/.errlog
 		    arch_chroot "yaourt -S --noconfirm pamac-aur" 2>/tmp/.errlog
 
