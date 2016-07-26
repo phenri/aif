@@ -2131,6 +2131,7 @@ install_de_wm() {
 		"ttf-dejavu" "-" on \
 		"xdg-user-dirs" "-" on \
 		"xdg-utils" "-" on \
+		"fakeroot" "-" on \
 		"xterm" "-" on 2>${PACKAGES}
 
 		# If at least one package, install.
@@ -2153,7 +2154,7 @@ install_de_wm() {
 		    cp -r /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
 
 		    arch_chroot "yaourt -Syua" 2>/tmp/.errlog
-		    arch_chroot "yaourt -S pamac-aur" 2>/tmp/.errlog
+		    arch_chroot "yaourt -S --noconfirm pamac-aur" 2>/tmp/.errlog
 
 		fi
 
