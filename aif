@@ -2148,7 +2148,6 @@ install_de_wm() {
 			cp -r /aif-master/packbox/.fonts ${MOUNTPOINT}/home/$i
 
 		    cp -f /aif-master/packbox/conky/.conkyrc ${MOUNTPOINT}/home/$i
-		    cp -f /aif-master/packbox/conky/.conkyrc2 ${MOUNTPOINT}/home/$i
 
 		    cp -r /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 		    cp -r /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
@@ -2157,6 +2156,10 @@ install_de_wm() {
 
 		    arch_chroot "yaourt -Syua" 2>/tmp/.errlog
 		    arch_chroot "yaourt -S --noconfirm pamac-aur" 2>/tmp/.errlog
+		    arch_chroot "yaourt -S --noconfirm gtk-theme-config" 2>/tmp/.errlog
+		    arch_chroot "yaourt -S --noconfirm seafile-client" 2>/tmp/.errlog
+		    arch_chroot "yaourt -S --noconfirm numix-circle-icon-theme-git" 2>/tmp/.errlog
+		    arch_chroot "yaourt -S --noconfirm numix-folders-git" 2>/tmp/.errlog
 
 		fi
 
