@@ -2092,13 +2092,10 @@ install_de_wm() {
 	"file-roller + xarchiver + unrar" "-" on \
 	"gimp + gimp-help-fr" "-" on \
 	"yaourt" "-" on \
-	"mate-extra-gtk3" "-" off \
 	"epdfview" "-" on \
 	"libreoffice-fresh" "-" on \
 	"libreoffice-fresh-fr" "-" on \
 	"dropbox" "-" on \
-	"numix-themes" "-" on \
-	"ld-lsb" "-" on \
 	"openbox + openbox-themes" "-" off \
 	"pekwm + pekwm-themes" "-" off \
 	"windowmaker" "-" off 2>${PACKAGES}
@@ -2131,7 +2128,7 @@ install_de_wm() {
 		"ttf-dejavu" "-" on \
 		"xdg-user-dirs" "-" on \
 		"xdg-utils" "-" on \
-		"fakeroot" "-" on \
+		"ld-lsb" "-" on \
 		"xterm" "-" on 2>${PACKAGES}
 
 		# If at least one package, install.
@@ -2153,6 +2150,7 @@ install_de_wm() {
 		    cp -r /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
 
 		    cp -f /aif-master/packbox/makepkg ${MOUNTPOINT}/usr/bin
+		    cp -f /aif-master/packbox/.gtkrc-2.0 ${MOUNTPOINT}/home/$i
 
 		    arch_chroot "yaourt -Syua" 2>/tmp/.errlog
 		    arch_chroot "yaourt -S --noconfirm pamac-aur" 2>/tmp/.errlog
