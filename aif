@@ -2096,7 +2096,7 @@ install_de_wm() {
 	"libreoffice-fresh" "-" on \
 	"libreoffice-fresh-fr" "-" on \
 	"dropbox" "-" on \
-	"openbox + openbox-themes" "-" off \
+	"gtk-engine-murrine" "-" off \
 	"pekwm + pekwm-themes" "-" off \
 	"windowmaker" "-" off 2>${PACKAGES}
 
