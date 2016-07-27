@@ -1453,7 +1453,7 @@
 [skins2] # Skinnable Interface
 
 # Skin to use (string)
-skins2-last=/home/antidote/.config/vlc/154884-vlt_deepdark.vlt
+skins2-last=/home/antidote/Dropbox/xfce themes/154884-vlt_deepdark.vlt
 
 # Config of last used skin (string)
 skins2-config=["aboutwin" "aboutwinwin-main" 795 454 330 171 0]["eqwin" "eqwin-main" 795 454 330 171 0]["fullscreenController" "fsc_normal" 710 918 500 130 0]["main" "normal" 529 232 756 371 1]["plwin" "plwin-normal" 806 419 500 350 0]

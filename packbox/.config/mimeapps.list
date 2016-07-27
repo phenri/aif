@@ -1,0 +1,24 @@
+[Added Associations]
+image/jpeg=ristretto.desktop;
+text/plain=mousepad.desktop;
+application/x-cd-image=org.gnome.FileRoller.desktop;
+application/x-compressed-tar=org.gnome.FileRoller.desktop;
+text/x-matlab=mousepad.desktop;
+video/mp4=smplayer.desktop;mpv.desktop;vlc.desktop;mplayer.desktop;
+application/zip=org.gnome.FileRoller.desktop;
+application/pdf=epdfview.desktop;gimp.desktop;
+video/x-msvideo=smplayer.desktop;vlc.desktop;smplayer_enqueue.desktop;
+application/x-7z-compressed=org.gnome.FileRoller.desktop;
+audio/flac=vlc.desktop;
+application/x-shellscript=mousepad.desktop;
+text/x-scheme=mousepad.desktop;
+application/xml=mousepad.desktop;
+application/x-desktop=mousepad.desktop;
+application/xspf+xml=mousepad.desktop;
+text/x-ssa=mousepad.desktop;
+text/css=mousepad.desktop;
+application/gzip=org.gnome.FileRoller.desktop;
+
+[Default Applications]
+video/mp4=smplayer.desktop
+application/pdf=epdfview.desktop
