@@ -75,13 +75,13 @@ LUKS_UUID=""						# UUID used for comparison purposes
 LUKS_OPT=""							# Default or user-defined?
 
 # Locale and Language
-CURR_LOCALE="en_US.UTF-8"   		# Default Locale
+CURR_LOCALE="fr_FR.UTF-8"   		# Default Locale
 FONT=""                     		# Set new font if necessary
-KEYMAP="us"          				# Virtual console keymap. Default is "us"
-XKBMAP="us"      	    			# X11 keyboard layout. Default is "us"
+KEYMAP="fr"          				# Virtual console keymap. Default is "us"
+XKBMAP="fr"      	    			# X11 keyboard layout. Default is "us"
 ZONE=""               				# For time
 SUBZONE=""            				# For time
-LOCALE="en_US.UTF-8"  				# System locale. Default is "en_US.UTF-8"
+LOCALE="fr_FR.UTF-8"  				# System locale. Default is "en_US.UTF-8"
 
 
 # Edit Files
