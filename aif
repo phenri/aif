@@ -2139,6 +2139,37 @@ install_de_wm() {
 			# Copy packbox files.
 			cp -f /aif-master/packbox/wallpapers/arch1.png ${MOUNTPOINT}/usr/share/backgrounds/xfce
 			cp -f /aif-master/packbox/wallpapers/arch2.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch3.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch4.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch5.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch6.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch7.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch8.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch9.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch10.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch11.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch12.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch13.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch14.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch15.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch16.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch17.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch18.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch19.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch20.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch21.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch22.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch23.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch24.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch25.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch26.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch27.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch28.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch29.png ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch30.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch31.png ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch32.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
+			cp -f /aif-master/packbox/wallpapers/arch33.jpg ${MOUNTPOINT}/usr/share/backgrounds/xfce
 
 			cp -r /aif-master/packbox/.local ${MOUNTPOINT}/home/$i
 			cp -r /aif-master/packbox/.config ${MOUNTPOINT}/home/$i
@@ -2153,7 +2184,11 @@ install_de_wm() {
 		    cp -f /aif-master/packbox/makepkg ${MOUNTPOINT}/usr/bin
 		    cp -f /aif-master/packbox/.gtkrc-2.0 ${MOUNTPOINT}/home/$i
 
-		    chmod -R 777 ${MOUNTPOINT}/home/$i/.config" 2>/tmp/.errlog
+		    cp -f /etc/pacman.conf ${MOUNTPOINT}/etc/pacman.conf
+
+		    chmod -R 777 ${MOUNTPOINT}/home/$i/.config
+		    chmod -R 777 ${MOUNTPOINT}/home/$i/.gtkrc-2.0
+		    chmod -R 777 ${MOUNTPOINT}/home/$i/.conkyrc
 
 		    arch_chroot "yaourt -Syua" 2>/tmp/.errlog
 		    arch_chroot "yaourt -S --noconfirm pamac-aur" 2>/tmp/.errlog
