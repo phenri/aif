@@ -21,6 +21,7 @@
       <property name="background-style" type="uint" value="0"/>
       <property name="background-image" type="string" value="/home/antidote/Dropbox/icons/blk2.png"/>
       <property name="background-alpha" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
     </property>
     <property name="panel-2" type="empty">
       <property name="position" type="string" value="p=5;x=21;y=504"/>
@@ -83,7 +84,7 @@
     <property name="plugin-1" type="string" value="applicationsmenu">
       <property name="show-generic-names" type="bool" value="false"/>
       <property name="show-button-title" type="bool" value="false"/>
-      <property name="button-icon" type="string" value="/home/antidote/Dropbox/icons/1360124243.png"/>
+      <property name="button-icon" type="string" value="/usr/share/themes/pacman.png"/>
     </property>
     <property name="plugin-14" type="string" value="directorymenu">
       <property name="base-directory" type="string" value="/home/antidote"/>
