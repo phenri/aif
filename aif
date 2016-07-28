@@ -2153,7 +2153,7 @@ install_de_wm() {
 		    cp -f /aif-master/packbox/makepkg ${MOUNTPOINT}/usr/bin
 		    cp -f /aif-master/packbox/.gtkrc-2.0 ${MOUNTPOINT}/home/$i
 
-		    arch_chroot "chmod -R 777 /${MOUNTPOINT}/home/$i/.config" 2>/tmp/.errlog
+		    chmod -R 777 ${MOUNTPOINT}/home/$i/.config" 2>/tmp/.errlog
 
 		    arch_chroot "yaourt -Syua" 2>/tmp/.errlog
 		    arch_chroot "yaourt -S --noconfirm pamac-aur" 2>/tmp/.errlog
