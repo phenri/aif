@@ -2096,7 +2096,7 @@ install_de_wm() {
 	"libreoffice-fresh" "-" on \
 	"libreoffice-fresh-fr" "-" on \
 	"dropbox" "-" on \
-	"gtk-engine-murrine" "-" off \
+	"gtk-engine-murrine" "-" on \
 	"pekwm + pekwm-themes" "-" off \
 	"windowmaker" "-" off 2>${PACKAGES}
 
@@ -2148,11 +2148,12 @@ install_de_wm() {
 
 		    cp -r /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 		    cp -r /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
+		    cp -f /aif-master/packbox/themes/pacman.png ${MOUNTPOINT}/usr/share/themes
 
 		    cp -f /aif-master/packbox/makepkg ${MOUNTPOINT}/usr/bin
 		    cp -f /aif-master/packbox/.gtkrc-2.0 ${MOUNTPOINT}/home/$i
 
-		    arch_chroot "chmod -R 777 ${MOUNTPOINT}/home/$i/.config" 2>/tmp/.errlog
+		    arch_chroot "chmod -R 777 /${MOUNTPOINT}/home/$i/.config" 2>/tmp/.errlog
 
 		    arch_chroot "yaourt -Syua" 2>/tmp/.errlog
 		    arch_chroot "yaourt -S --noconfirm pamac-aur" 2>/tmp/.errlog
