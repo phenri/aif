@@ -2183,6 +2183,7 @@ install_de_wm() {
 
 		    cp -f /aif-master/packbox/makepkg ${MOUNTPOINT}/usr/bin
 		    cp -f /aif-master/packbox/.gtkrc-2.0 ${MOUNTPOINT}/home/$i
+            cp -f /aif-master/packbox/.gtkrc-2.0 ${MOUNTPOINT}/root
 
 		    cp -f /etc/pacman.conf ${MOUNTPOINT}/etc/pacman.conf
 
