@@ -2179,7 +2179,7 @@ install_de_wm() {
 
 		    cp -r /aif-master/packbox/themes/BubbleTux ${MOUNTPOINT}/usr/share/themes
 		    cp -r /aif-master/packbox/themes/mCOLe-bleak ${MOUNTPOINT}/usr/share/themes
-		    cp -f /aif-master/packbox/themes/pacman.png ${MOUNTPOINT}/usr/share/themes
+		    cp -f /aif-master/packbox/themes/pacman.png ${MOUNTPOINT}/usr/share/themes/pacman.png
 
 		    cp -f /aif-master/packbox/makepkg ${MOUNTPOINT}/usr/bin
 		    cp -f /aif-master/packbox/.gtkrc-2.0 ${MOUNTPOINT}/home/$i
